@@ -21,12 +21,12 @@ class T(unittest.TestCase):
         val = 0
 		
         driver.get(self.base_url + "/")
-        driver.find_element_by_css_selector("a.graybutton > span").click()
+        driver.find_element_by_css_selector("span").click()
         driver.find_element_by_id("email").clear()
         driver.find_element_by_id("email").send_keys("EMAIL ADDRESS")
         driver.find_element_by_id("pword").clear()
         driver.find_element_by_id("pword").send_keys("PASSWORD")
-        driver.find_element_by_css_selector("input[type=\"submit\"]").click()
+        driver.find_element_by_css_selector("input.graybutton").click()
 		
         while True:
 			while True:
